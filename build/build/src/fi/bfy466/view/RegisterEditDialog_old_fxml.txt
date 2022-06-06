@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane prefHeight="480.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fi.bfy466.view.RegisterEditDialogController">
+   <children>
+      <GridPane layoutX="20.0" layoutY="31.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.0" minWidth="10.0" prefWidth="165.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="458.0" minWidth="10.0" prefWidth="248.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="160.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Start register" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <padding>
+                  <Insets right="15.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="registerStartField" maxWidth="70.0" minWidth="50.0" prefHeight="25.0" prefWidth="70.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Description" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <padding>
+                  <Insets right="15.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="registerDescriptionField" maxWidth="255.0" minWidth="255.0" prefHeight="25.0" prefWidth="255.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <RadioButton mnemonicParsing="false" text="Coil (Function code 1, 5, 15)" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <RadioButton mnemonicParsing="false" text="Discrete Input (Function code 2)" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <RadioButton mnemonicParsing="false" text="Holding register (Function code 3, 6, 16)" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <RadioButton mnemonicParsing="false" text="Input register (Function code 4)" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <CheckBox mnemonicParsing="false" text="Double" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <CheckBox mnemonicParsing="false" text="Double" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Label text="Multiplier" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+               <padding>
+                  <Insets right="15.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="registerMultiplierField" maxWidth="50.0" minWidth="50.0" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label text="Register type:" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+               <padding>
+                  <Insets right="15.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="registerSeriesField" maxWidth="70.0" minWidth="50.0" prefHeight="25.0" prefWidth="70.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="registerTypeField" maxWidth="50.0" minWidth="50.0" prefHeight="25.0" prefWidth="50.0" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets right="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Registers in series" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <padding>
+                  <Insets right="15.0" />
+               </padding>
+            </Label>
+            <Label text="Version date" GridPane.halignment="RIGHT" GridPane.rowIndex="9">
+               <padding>
+                  <Insets right="15.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="versionDateField" maxWidth="70.0" minWidth="70.0" prefHeight="25.0" prefWidth="70.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label text="Port" GridPane.halignment="RIGHT">
+               <padding>
+                  <Insets right="15.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="registerPortField" maxWidth="70.0" minWidth="50.0" prefHeight="25.0" prefWidth="70.0" GridPane.columnIndex="1" />
+            <Label layoutX="86.0" layoutY="47.0" text="HEX: " GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <padding>
+                  <Insets right="15.0" />
+               </padding>
+            </Label>
+            <Label fx:id="registerStartHexLabel" text="? HEX: " GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <padding>
+                  <Insets right="15.0" />
+               </padding>
+            </Label>
+         </children>
+      </GridPane>
+      <ButtonBar layoutX="380.0" layoutY="418.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#handleOk" text="OK" />
+            <Button mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+        </buttons>
+      </ButtonBar>
+      <Line endY="-230.0" layoutX="174.0" layoutY="409.0" startY="-130.0" />
+   </children>
+</AnchorPane>
