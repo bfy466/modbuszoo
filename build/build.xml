@@ -23,7 +23,7 @@
 
 		<mkdir dir="project" />
 		<copy todir="project">
-			<fileset dir="C:\temp\SW\modbuszoo\modbuszoo">
+			<fileset dir="C:\SW\modbuszoo">
 				<include name="src/**" />
 			</fileset>
 		</copy>
